@@ -29,3 +29,6 @@
 *   `src/app/app.ts`: Root Component ของแอปพลิเคชัน
 *   `src/app/app.config.ts`: การตั้งค่าแอปพลิเคชัน (เช่น Zoneless, Router)
 
+## Live Demo
+
+**สามารถทดลองเล่นโปรเจกต์จริงได้ที่นี่:** [คลิกเพื่อดูตัวอย่างเว็บไซต์](https://pong-game-f135d.web.app/)
