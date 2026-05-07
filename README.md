@@ -29,6 +29,11 @@
 *   `src/app/app.ts`: Root Component ของแอปพลิเคชัน
 *   `src/app/app.config.ts`: การตั้งค่าแอปพลิเคชัน (เช่น Zoneless, Router)
 
+## เพิ่มเติม
+
+เว็บไซต์ Pong Game นี้ จำเป็นจะต้องมี backend ก่อนจะเล่นได้
+**สามารถดูโปรเจกต์ Backend ของ Pong Game ได้ที่นี่:** [คลิกเพื่อดู Repository Backend ของระบบนี้](https://github.com/MunbodPRGRM/pong-game-nodejs.git)
+
 ## Live Demo
 
 **สามารถทดลองเล่นโปรเจกต์จริงได้ที่นี่:** [คลิกเพื่อดูตัวอย่างเว็บไซต์](https://pong-game-f135d.web.app/)
