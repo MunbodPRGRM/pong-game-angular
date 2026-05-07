@@ -40,7 +40,7 @@ export class PongCanvas implements OnInit, AfterViewInit, OnDestroy {
    */
   ngOnInit(): void {
     // เชื่อมต่อไปยัง Server ที่รันอยู่ที่ port 3000
-    this.socket = io('http://localhost:3000');
+    this.socket = io('https://pong-game-nodejs.onrender.com');
 
     // รับแจ้งจาก Server ว่าเราได้เล่นฝั่งไหน
     this.socket.on('playerRole', (role: string) => {

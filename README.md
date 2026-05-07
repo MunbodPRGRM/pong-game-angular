@@ -1,59 +1,31 @@
-# PongMultiplayer
+# Pong Multiplayer (เกมพองแบบเล่นหลายคน)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+โปรเจกต์นี้เป็นเกม Pong แบบ Real-time ที่พัฒนาด้วย **Angular** และ **Socket.io** โดยใช้ **HTML5 Canvas** สำหรับการแสดงผลกราฟิก เกมนี้ถูกออกแบบมาให้ผู้เล่นสองคนสามารถแข่งขันกันได้ผ่านระบบออนไลน์
 
-## Development server
+## คุณสมบัติเด่น (Features)
 
-To start a local development server, run:
+*   **Real-time Multiplayer:** เล่นแข่งกันได้ทันทีผ่าน WebSockets (Socket.io)
+*   **Server-Side Logic:** การคำนวณตำแหน่งลูกบอลและคะแนนถูกจัดการที่ฝั่ง Server เพื่อความแม่นยำและป้องกันการโกง
+*   **Waiting Room:** ระบบรอผู้เล่นคนที่สองก่อนเริ่มเกม
+*   **Game Over Screen:** หน้าจอแสดงผลผู้ชนะเมื่อจบการแข่งขัน
+*   **Responsive Control:** รองรับการควบคุมผ่านคีย์บอร์ดทั้งปุ่มลูกศร (Arrow Keys) และ W/S
 
-```bash
-ng serve
-```
+## เทคโนโลยีที่ใช้ (Tech Stack)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+*   **Frontend:** [Angular](https://angular.io/) (เวอร์ชันล่าสุดพร้อม Standalone Components และ Zoneless Detection)
+*   **Backend:** Node.js พร้อม [Socket.io](https://socket.io/) (รันแยกที่ port 3000)
+*   **Graphics:** HTML5 Canvas API
+*   **Language:** TypeScript
 
-## Code scaffolding
+## วิธีการเล่น (How to Play)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+*   **ผู้เล่นที่ 1 (ฝั่งซ้าย):** ใช้ปุ่ม `W` (ขึ้น) และ `S` (ลง) หรือปุ่มลูกศร
+*   **ผู้เล่นที่ 2 (ฝั่งขวา):** ใช้ปุ่ม `W` (ขึ้น) และ `S` (ลง) หรือปุ่มลูกศร
+*   **เป้าหมาย:** ตีลูกบอลให้ผ่านไม้ตีของคู่ต่อสู้เพื่อสะสมคะแนน
 
-```bash
-ng generate component component-name
-```
+## โครงสร้างโปรเจกต์ที่สำคัญ (Project Structure)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+*   `src/app/pong-canvas/`: ส่วนหลักที่จัดการการวาดภาพ (Canvas) และการเชื่อมต่อ Socket
+*   `src/app/app.ts`: Root Component ของแอปพลิเคชัน
+*   `src/app/app.config.ts`: การตั้งค่าแอปพลิเคชัน (เช่น Zoneless, Router)
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
